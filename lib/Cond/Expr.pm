@@ -32,7 +32,7 @@ XSLoader::load(
 
 =head1 DESCRIPTION
 
-This module implements a Lisp alike C<cond> control structure.
+This module implements a Lisp-alike C<cond> control structure.
 
 =head2 How is this different from…
 
@@ -45,7 +45,7 @@ as part of an expression unless its use is wrapped within a C<do> block, which
 is cumbersome.
 
 Additionally, this module avoids all the, possibly unwanted, side effects
-C<given>/C<when> and it's underlying smart matching mechanism happen to impose.
+C<given>/C<when> and its underlying smart matching mechanism happen to impose.
 
 =item * C<if>/C<elsif>/C<else>
 
@@ -72,11 +72,11 @@ module being easier on the eye.
 
 =back
 
-=func cond
+=func C<cond>
 
-Takes a set of test/expr pairs. It evaluates each test one at a time. If a test
-returns logical true, cond evaluates and returns the value of the corresponding
-expr and doesn't evaluate any of the other tests or exprs. When none of the
+Takes a set of test/expression pairs. It evaluates each test one at a time. If a test
+returns logical true, C<cond> evaluates and returns the value of the corresponding
+expression and doesn't evaluate any of the other tests or expressions. When none of the
 provided tests yield a true value, C<()> or C<undef> is returned in list and
 scalar context, respectively.
 
