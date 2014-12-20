@@ -1,6 +1,10 @@
-0.02  Mon, 05 Mar 2012 15:44:32 +0100
-  * Fix a small documentation mistake (Sawyer X)
+Revision history for {{$dist->name}}
 
-0.01  Wed, 29 Feb 2012 14:54:50 +0200
-  * Initial release
+{{$NEXT}}
+
+0.02   2012-03-05 14:44:32Z
+  - Fix a small documentation mistake (Sawyer X)
+
+0.01   2012-02-29 12:54:50Z
+  - Initial release
 
