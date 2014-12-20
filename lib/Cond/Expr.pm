@@ -80,6 +80,11 @@ expression and doesn't evaluate any of the other tests or expressions. When none
 provided tests yield a true value, C<()> or C<undef> is returned in list and
 scalar context, respectively.
 
+=head1 PERL REQUIREMENTS
+
+Due to the particular XS interfaces being used, this module requires a minimum
+Perl version of 5.014.
+
 =cut
 
 1;

@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - specify that distribution requires a minimum perl version of 5.014
 
 0.02   2012-03-05 14:44:32Z
   - Fix a small documentation mistake (Sawyer X)
