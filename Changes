@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.03   2014-12-21 00:17:16Z
   - specify that distribution requires a minimum perl version of 5.014
 
 0.02   2012-03-05 14:44:32Z
