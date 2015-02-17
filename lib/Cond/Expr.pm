@@ -58,11 +58,11 @@ Using nested ternary C<?:> expressions, such as in
 
   my %args = (
       foo => 'bar',
-      (($answer == 42)
-          ? (answer => $answer)
-              : ($answer)
-                  ? (wrong_answer => 1)
-                      : (no_answer => 1)),
+      (
+            ($answer == 42) ? (answer => $answer)
+          : ($answer)       ? (wrong_answer => 1)
+          :                   (no_answer => 1)
+      ),
   );
 
 can be used to achieve functionality similar to what this module provides. In
