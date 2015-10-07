@@ -4,6 +4,8 @@ use warnings;
 package Cond::Expr;
 # ABSTRACT: conditionals as expressions
 
+our $VERSION = '0.05';
+
 use Sub::Exporter -setup => {
     exports => ['cond'],
     groups  => { default => ['cond'] },
