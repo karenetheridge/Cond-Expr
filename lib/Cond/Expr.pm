@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package Cond::Expr;
-# ABSTRACT: conditionals as expressions
+# ABSTRACT: Conditionals as expressions
 
 our $VERSION = '0.05';
 
