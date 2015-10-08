@@ -2,7 +2,6 @@ package MMHelper;
 
 use strict;
 use warnings;
-use Config ();
 use Devel::CallChecker;
 use Devel::CallParser;
 
