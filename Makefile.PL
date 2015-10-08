@@ -13,5 +13,7 @@ WriteMakefile(
     VERSION_FROM => 'lib/Cond/Expr.pm',
     NORECURS => 1,
     CCFLAGS  => MMHelper::ccflags_static('dev'),
+    INSTALLMAN1DIR => 'none',
+    INSTALLMAN3DIR => 'none',
     MMHelper::mm_args(),
 );
