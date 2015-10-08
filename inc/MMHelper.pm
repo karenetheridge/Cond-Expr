@@ -49,8 +49,6 @@ sub write_header {
     \$fh->print(\$content) or die \$!;
     \$fh->close or die \$!;
 }
-
-1;
 EOC
 }
 
