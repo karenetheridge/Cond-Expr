@@ -18,7 +18,7 @@ use XSLoader;
 
 XSLoader::load(
     __PACKAGE__,
-    $Cond::Expr::{VERSION} ? ${ $Cond::Expr::{VERSION} } : (),
+    $VERSION,
 );
 
 =head1 SYNOPSIS
