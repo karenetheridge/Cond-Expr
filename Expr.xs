@@ -3,6 +3,7 @@
 #include "callchecker0.h"
 #include "callparser.h"
 #include "XSUB.h"
+#include "ppport.h"
 
 #define DEMAND_IMMEDIATE 0x00000001
 #define DEMAND_NOCONSUME 0x00000002
