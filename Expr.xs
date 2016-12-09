@@ -61,19 +61,25 @@ static OP *
 myck_entersub_cond (pTHX_ OP *entersubop, GV *namegv, SV *ckobj)
 {
   OP *pushop, *condop, *rv2cvop;
+  OP *parent = entersubop;
 
   PERL_UNUSED_ARG(namegv);
   PERL_UNUSED_ARG(ckobj);
 
   pushop = cUNOPx(entersubop)->op_first;
-  if (!pushop->op_sibling)
+  if (!OpHAS_SIBLING(pushop)) {
+    parent = pushop;
     pushop = cUNOPx(pushop)->op_first;
+  }
 
+#ifdef op_sibling_splice
+  condop = op_sibling_splice(parent, pushop, 1, NULL);
+#else
   condop = pushop->op_sibling;
-
   rv2cvop = condop->op_sibling;
   condop->op_sibling = NULL;
   pushop->op_sibling = rv2cvop;
+#endif
 
   op_free(entersubop);
   return condop;
