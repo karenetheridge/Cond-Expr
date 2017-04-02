@@ -1,6 +1,6 @@
 Revision history for Cond-Expr
 
-{{$NEXT}}
+0.05   2017-04-02 23:14:10Z
   - fixes for perl 5.25.1 for manipulation of op_sibling (RT#117254; thanks,
     Dave Mitchell!)
 

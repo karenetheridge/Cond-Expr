@@ -4,11 +4,11 @@
 
 =head1 NAME
 
-Cond::Expr - conditionals as expressions
+Cond::Expr - Conditionals as expressions
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -49,11 +49,11 @@ Using nested ternary C<?:> expressions, such as in
 
   my %args = (
       foo => 'bar',
-      (($answer == 42)
-          ? (answer => $answer)
-              : ($answer)
-                  ? (wrong_answer => 1)
-                      : (no_answer => 1)),
+      (
+            ($answer == 42) ? (answer => $answer)
+          : ($answer)       ? (wrong_answer => 1)
+          :                   (no_answer => 1)
+      ),
   );
 
 can be used to achieve functionality similar to what this module provides. In
@@ -78,11 +78,40 @@ scalar context, respectively.
 Due to the particular XS interfaces being used, this module requires a minimum
 Perl version of 5.014.
 
+=head1 SUPPORT
+
+Bugs may be submitted through L<the RT bug tracker|https://rt.cpan.org/Public/Dist/Display.html?Name=Cond-Expr>
+(or L<bug-Cond-Expr@rt.cpan.org|mailto:bug-Cond-Expr@rt.cpan.org>).
+
 =head1 AUTHOR
 
 Florian Ragwitz <rafl@debian.org>
 
-=head1 COPYRIGHT AND LICENSE
+=head1 CONTRIBUTORS
+
+=for stopwords Karen Etheridge David Mitchell Olivier Mengué Sawyer X
+
+=over 4
+
+=item *
+
+Karen Etheridge <ether@cpan.org>
+
+=item *
+
+David Mitchell <davem@iabyn.com>
+
+=item *
+
+Olivier Mengué <dolmen@cpan.org>
+
+=item *
+
+Sawyer X <xsawyerx@cpan.org>
+
+=back
+
+=head1 COPYRIGHT AND LICENCE
 
 This software is copyright (c) 2012 by Florian Ragwitz.
 
