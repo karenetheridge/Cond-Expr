@@ -1,6 +1,8 @@
 Revision history for Cond-Expr
 
 {{$NEXT}}
+  - fixes for perl 5.25.1 for manipulation of op_sibling (RT#117254; thanks,
+    Dave Mitchell!)
 
 0.04   2015-01-03 20:45:48Z
   - re-release to fix problematic $VERSION declaration (RT#101095)
